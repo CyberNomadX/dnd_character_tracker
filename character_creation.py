@@ -1,12 +1,19 @@
 def create_character():
-	name = input("Enter Character Name: ")
+	firstname = input("Enter Character's First Name: ")
+	lastname = input("Enter Characters's Last Name: ")
 	level = int(input("Enter Character Level: "))
-	health = int(input("Enter Health "))
-	damage = int(input("Enter Damage: "))
+	health = int(input("Enter Character Health: "))
 
-	return{
-		"Name": name,
-		"Level": level,
-		"Health": health,
-		"Damage": damage
+	return {
+	"First Name": firstname,
+	"Last Name": lastname,
+	"Level": level,
+	"Health": health
 	}
+
+character = create_character()
+
+print(f"\n --- Current Character ---")
+print(f"Name: {character['First Name']} {character['Last Name']}")
+print(f"Level: {character['Level']}")
+print(f"Health: {character['Health']}")
